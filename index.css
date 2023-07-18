@@ -20,9 +20,9 @@ body{
 .link:hover{
   color: rgb(244, 253, 0) ;
 }
-.navbar-nav{
-    display: -webkit-inline-box;
-
+.navbar-right{
+    float: right;
+    flex-direction: row;
 }
 .footer{
     padding: 50px 240px;
@@ -191,4 +191,41 @@ body{
     width: 35%;
     height: 5px;
     background-color: rgb(244, 253, 0); 
+}
+@media all and (max-width: 700px){
+    body{
+        margin: auto;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    .paragraph{
+        width: 100%;
+        padding: 10px;
+        
+    }
+    .coloured, .non-coloured{
+        justify-content: center;
+        text-align: center;
+    }
+    .image{
+      padding-top: 50px; 
+    }
+    .about{
+        position: relative;
+    }
+    .about::after{
+        content: " ";
+        background-color:  rgb(244, 253, 0);
+        position: absolute;
+        width: 25%;
+        left: 45%;
+    }
+    .box1, .box2{
+        width: 200px ;
+        height: 190px;
+    }
+    .mynav{
+        display: none;
+    }
 }
